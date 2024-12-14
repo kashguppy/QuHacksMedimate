@@ -1,0 +1,70 @@
+/* Global Styles */
+body {
+    background-color: #e0d8ca;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f88d8d;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 10px 0;
+}
+
+p {
+    text-align: center;
+}
+
+form, .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+input, textarea, button {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 80%;
+}
+
+button {
+    background-color: #ff8080;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff5757;
+}
+
+textarea {
+    height: 150px;
+    resize: none;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}

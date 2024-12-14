@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Screen -->
+    <section id="loginScreen">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="button" onclick="goToUserInfoSection()">Login</button>
+    </section>
+
+    <!-- User Info Section -->
+    <section id="userInfoSection" class="hidden">
+        <h2>Step 1: Enter Your Personal Details</h2>
+        <form id="userForm">
+            <input type="text" id="name" placeholder="Your Name" required><br>
+            <input type="number" id="age" placeholder="Your Age" required><br>
+            <input type="number" id="weight" placeholder="Your Weight (kg)" required><br>
+            <button type="button" onclick="goToMedicationSection()">Done</button>
+        </form>
+    </section>
+
+    <!-- Medication Upload Section -->
+<section id="medicationSection" class="hidden">
+    <h2>Step 2: Upload Your Medications</h2>
+    <input type="file" id="medicationImage" accept="image/*"><br><br>
+    <button type="button" onclick="addMedication()">Add Medication</button>
+    <button type="button" onclick="goToJournalSection()">Done</button>
+    <ul id="medicationPreview"></ul>
+    
+    <!-- Caution Message -->
+    <div id="cautionMessage" style="display: none; color: red; font-weight: bold; margin-top: 20px;"></div>
+</section>
+
+    <!-- Journal Section -->
+    <section id="journalSection" class="hidden">
+        <h2>Your Medication Schedule & Journal</h2>
+        <div id="schedule">
+            <h3>Your Medication Schedule</h3>
+            <ul id="medicationList"></ul>
+        </div>
+        <h3>Journal Your Symptoms</h3>
+        <textarea id="symptoms" placeholder="Write your symptoms here..."></textarea><br>
+        <h3>Doctor's Contact Information</h3>
+        <input type="text" id="doctorContact" placeholder="Doctor's Phone or Email"><br>
+        <button onclick="saveJournal()">Save Journal</button>
+        <div id="quote">
+            <p>"Every day is a chance to get stronger."</p>
+        </div>
+    </section>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
